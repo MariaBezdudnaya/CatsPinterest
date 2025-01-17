@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/CatsPinterest/static/css/main.d7b781ad.css",
+    "main.css": "/CatsPinterest/static/css/main.36818a87.css",
     "main.js": "/CatsPinterest/static/js/main.e5501a37.js",
     "static/media/meow-meow.mp3": "/CatsPinterest/static/media/meow-meow.dc176cdcdafd0cfaacc6.mp3",
     "index.html": "/CatsPinterest/index.html",
     "static/media/volume_up_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg": "/CatsPinterest/static/media/volume_up_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.44281b1c863b34e9f5c7.svg",
     "static/media/volume_down_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg": "/CatsPinterest/static/media/volume_down_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.064dde8ef95ab9e8a67b.svg",
-    "main.d7b781ad.css.map": "/CatsPinterest/static/css/main.d7b781ad.css.map",
+    "main.36818a87.css.map": "/CatsPinterest/static/css/main.36818a87.css.map",
     "main.e5501a37.js.map": "/CatsPinterest/static/js/main.e5501a37.js.map"
   },
   "entrypoints": [
-    "static/css/main.d7b781ad.css",
+    "static/css/main.36818a87.css",
     "static/js/main.e5501a37.js"
   ]
 }
