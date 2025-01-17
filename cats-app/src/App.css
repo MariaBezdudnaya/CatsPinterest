@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+  font-size: 16px;
+}
+
+.app {
+  font-family: 'Roboto', 'Helvetica Neue', Arial;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.3125rem;
+  letter-spacing: 0.015625rem;
+  text-align: center;
+  background: #f8f9fa;
+  color: #212529;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+.app.Dark {
+  background: #343a40;
+  color: #f8f9fa;
+}
+
+header {
+  background-color: #2196F3;
+  box-shadow: 0 3px 10px #00000059;
+}
+header.Light {
+  background-color: #2196F3;
+}
+header.Dark {
+  background-color: #37474f;
+}
+
+.header-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 91.46vw;
+}
+
+nav {
+  display: flex;
+  justify-content: left;
+}
+
+nav button {
+  background-color: #2196F3;
+  height: 64px;
+  padding: 0 1.875rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+  color: #fdfdfdab;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  display: inline-block;
+}
+nav button.Light {
+  background-color: #2196F3;
+}
+nav button.Dark {
+  background-color: #37474f;
+}
+nav button:hover {
+  border: 2px solid #9747ff;
+}
+nav button.active {
+  background-color: #1e88e5;
+  color: #ffffff;
+}
+
+.music button {
+  cursor: pointer;
+  border: none;
+  width: 35px;
+  height: 35px;
+  transition: 0.5s;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #00000000;
+  background-image: url('images/volume_up_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg');
+  transition: 0.5s ease-in-out;
+}
+.music button.pause {
+  background-image: url('images/volume_down_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg');
+}
+.music button.play {
+  background-image: url('images/volume_up_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg');
+}
+
+.cat-list {
+  margin: 50px auto;
+  display: flex;
+  justify-content: flex-start;
+  gap: 3.33vw;
+  flex-wrap: wrap;
+  width: 91.46vw;
+  min-height: 100vh;
+}
+
+#favorite {
+  margin-bottom: 0;
+  min-height: 100vh;
+}
+
+#favorite {
+  margin-bottom: 0;
+}
+
+.cat-card {
+  width: 15.62vw;
+  height: 15.62vw;
+  transition: 0.5s;
+  position: relative;
+}
+.cat-card:hover {
+  transform: scale(1.14);
+  box-shadow: 0 10px 25px #00000030, 0 6px 6px #0000003b;
+}
+.cat-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.2s ease;
+}
+.cat-card button {
+  position: absolute;
+  bottom: 24.3px;
+  right: 19px;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 36.7px;
+  transition: 0.5s;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #00000000;
+  background-image: url('images/unclicked-heart.png');
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.cat-card button:hover {
+  background-image: url('images/clicked-heart.png');
+  opacity: 1;
+}
+.cat-card button.favorite {
+  background-image: url('images/clicked-heart.png');
+}
+
+.loading {
+  margin: 250px auto;
+}
+
+/* Loader */
+.loader-circle {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #2196F3;
+  border-radius: 50%;
+}
+.loader-spinner {
+  margin: 0 auto 20px;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #2196F3;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.settings {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Стили для переключателя темы */
+.toggle-container {
+  display: flex;
+  align-items: center;
+}
+.change-text {
+  margin-right: 10px;
+  color: #fff;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 32px;
+}
+.switch input {
+    display: none;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #858a8a;
+  transition: .4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+input:checked + .slider {
+  background-color: #1E88E5;
+}
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Для общих стилей полосы прокрутки */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #a9a9a9;
+  border-radius: 10px;
+  cursor: grab;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Стили для модального окна */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: auto; /* Add overflow for content that exceeds the viewport */
+}
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 70%;
+  max-height: 70%;
+  box-sizing: border-box; 
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  overflow: auto; 
+  box-sizing: border-box; 
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  overflow: auto; 
+}
+.modal-content img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Maintains aspect ratio while fitting the container */
+  display: block;
+}
+
+@media screen and (max-width: 790px) {
+  .cat-list {
+    justify-content: space-evenly;
+    width: 85vw;
+    gap: 4vw;
+    margin: 40px auto;
+  }
+  .cat-card {
+    width: 33vw;
+    height: 33vw;
+  }
+  .cat-card button {
+    bottom: 15px;
+    right: 15px;
+    width: 30px;
+    height: 26.7px;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .cat-list {
+    width: 70vw;
+  }
+  .cat-list {
+    width: 70vw;
+  }
+}
