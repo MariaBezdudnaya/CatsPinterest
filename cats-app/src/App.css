@@ -140,6 +140,7 @@ nav button.active {
   background-image: url('images/unclicked-heart.png');
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+  -webkit-tap-highlight-color: transparent;
 }
 .cat-card button:hover {
   background-image: url('images/clicked-heart.png');
@@ -149,11 +150,29 @@ nav button.active {
   background-image: url('images/clicked-heart.png');
 }
 
-.loading {
-  margin: 250px auto;
+.cat-card button.not-favorite {
+  background-image: url('images/unclicked-heart.png');
 }
 
 /* Loader */
+.loading {
+  position: fixed; /* Key change: fixes to viewport */
+  padding-top: 350px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000; /* Ensure it's on top */
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background */
+}
+.loader-container {
+display: flex;
+justify-content: center;
+align-items: center;
+}
 .loader-circle {
   width: 100px;
   height: 100px;
@@ -308,6 +327,18 @@ input:checked + .slider:before {
     height: 26.7px;
     opacity: 1;
   }
+  .cat-card button:hover {
+    opacity: 1;
+}
+}
+/* Disable hover on mobile */
+@media (max-width: 790px) {
+  .cat-card button:hover {
+    background-image: url('images/unclicked-heart.png');
+  }
+}
+.cat-card button.favorite {
+  background-image: url('images/clicked-heart.png');
 }
 
 @media screen and (max-width: 490px) {

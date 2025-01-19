@@ -69,9 +69,7 @@ useEffect(() => {
       {cats.map((cat) => (
         <CatCard key={cat.id} cat={cat} onImageClick={onImageClick} />
       ))}
-      <div ref={loadingRef}>
-        {loading && <p className="loading">Loading...</p>}
-      </div>
+      <div ref={loadingRef}></div>
     </div>
   );
 }
