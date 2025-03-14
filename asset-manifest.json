@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/CatsApp/static/css/main.9feadf4c.css",
+    "main.js": "/CatsApp/static/js/main.ed2087d1.js",
+    "static/media/meow-meow.mp3": "/CatsApp/static/media/meow-meow.dc176cdcdafd0cfaacc6.mp3",
+    "index.html": "/CatsApp/index.html",
+    "static/media/volume_up_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg": "/CatsApp/static/media/volume_up_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.44281b1c863b34e9f5c7.svg",
+    "static/media/volume_down_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg": "/CatsApp/static/media/volume_down_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.064dde8ef95ab9e8a67b.svg",
+    "main.9feadf4c.css.map": "/CatsApp/static/css/main.9feadf4c.css.map",
+    "main.ed2087d1.js.map": "/CatsApp/static/js/main.ed2087d1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9feadf4c.css",
+    "static/js/main.ed2087d1.js"
+  ]
+}
